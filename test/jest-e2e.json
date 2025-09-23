@@ -1,0 +1,28 @@
+{
+  "moduleFileExtensions": ["js", "json", "ts"],
+  "rootDir": ".",
+  "testEnvironment": "node",
+  "testRegex": ".e2e-spec.ts$",
+  "transform": {
+    "^.+\\.(t|j)s$": "ts-jest"
+  },
+  "collectCoverageFrom": [
+    "src/**/*.(t|j)s"
+  ],
+  "coverageDirectory": "../coverage-e2e",
+  "testTimeout": 30000,
+  "setupFilesAfterEnv": ["<rootDir>/setup.ts"],
+  "moduleNameMapper": {
+    "^@/(.*)$": "<rootDir>/../src/$1",
+    "^@/common/(.*)$": "<rootDir>/../src/common/$1",
+    "^@/modules/(.*)$": "<rootDir>/../src/modules/$1",
+    "^@/config/(.*)$": "<rootDir>/../src/config/$1",
+    "^@/types/(.*)$": "<rootDir>/../src/common/types/$1",
+    "^@/types$": "<rootDir>/../src/common/types",
+    "^@services/(.*)$": "<rootDir>/../src/modules/transaction/services/$1",
+    "^@controllers/(.*)$": "<rootDir>/../src/modules/transaction/controllers/$1",
+    "^@dto/(.*)$": "<rootDir>/../src/modules/transaction/dto/$1",
+    "^@enums/(.*)$": "<rootDir>/../src/modules/transaction/enums/$1",
+    "^@transaction/(.*)$": "<rootDir>/../src/modules/transaction/$1"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ES2020",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": false,
+    "paths": {
+      "@/*": ["src/*"],
+      "@/common/*": ["src/common/*"],
+      "@/modules/*": ["src/modules/*"],
+      "@/config/*": ["src/config/*"],
+      "@/types/*": ["src/common/types/*"],
+      "@/types": ["src/common/types"],
+      "@services/*": ["src/modules/transaction/services/*"],
+      "@controllers/*": ["src/modules/transaction/controllers/*"],
+      "@dto/*": ["src/modules/transaction/dto/*"],
+      "@transaction/*": ["src/modules/transaction/*"],
+      "@transaction/services/*": ["src/modules/transaction/services/*"],
+      "@transaction/controllers/*": ["src/modules/transaction/controllers/*"],
+      "@transaction/dto/*": ["src/modules/transaction/dto/*"],
+      "@transaction/enums/*": ["src/modules/transaction/enums/*"]
+    }
+  }
+}
