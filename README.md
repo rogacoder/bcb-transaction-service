@@ -4,7 +4,7 @@ Crypto transaction state management service built with NestJS
 
 ## Demo
 
-[https://bcb-wip-production.up.railway.app/api/docs#/](https://bcb-wip-production.up.railway.app/api/docs#/)
+[https://bcb-transaction-service-production.up.railway.app/api/docs#/](https://bcb-transaction-service-production.up.railway.app/api/docs#/)
 
 ## Requirements
 
@@ -144,6 +144,10 @@ npm run test:e2e
 ```
 
 # Some Manual Tests (AI generated)
+
+**Note**: For testing against the dev environment, replace `localhost:3000` with
+`https://bcb-transaction-service-production.up.railway.app/` in all curl
+commands below.
 
 ## 1. Health Check (No Auth Required)
 
