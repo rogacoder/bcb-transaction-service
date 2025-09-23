@@ -23,7 +23,12 @@ import {
   ApiBearerAuth,
 } from '@nestjs/swagger';
 import { TransactionService } from '@services/transaction.service';
-import { CreateTransactionDto, TransactionDetailDto, TransactionListItemDto } from '@dto/index';
+import {
+  CreateTransactionDto,
+  TransactionDetailDto,
+  TransactionListItemDto,
+  TransactionListResponseDto,
+} from '@dto/index';
 // Future: potential need to track the "referrer" (user || system) for audit purposes
 // import { UpdateSource } from '@/common/enums/transaction-status.enum';
 import { AuthGuard } from '../../../common/guards/auth.guard';
@@ -90,16 +95,7 @@ export class TransactionController {
   @ApiResponse({
     status: 200,
     description: TRANSACTION_MESSAGES.LIST_WITH_HATEOAS,
-    schema: {
-      type: 'object',
-      properties: {
-        transactions: {
-          type: 'array',
-          items: { $ref: '#/components/schemas/TransactionListItemDto' },
-        },
-        total: { type: 'number' },
-      },
-    },
+    type: TransactionListResponseDto,
   })
   @ApiResponse({
     status: 401,

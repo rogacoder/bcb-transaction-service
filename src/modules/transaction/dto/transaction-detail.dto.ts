@@ -1,5 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { TransactionStatus } from '@/common/enums/transaction-status.enum';
+import { TransactionListItemDto } from './transaction-list.dto';
 
 export class StatusUpdateDetailDto {
   @ApiProperty()
@@ -61,8 +62,8 @@ export class TransactionDetailDto {
 }
 
 export class TransactionListResponseDto {
-  @ApiProperty({ type: [TransactionDetailDto] })
-  transactions: TransactionDetailDto[];
+  @ApiProperty({ type: [TransactionListItemDto] })
+  transactions: TransactionListItemDto[];
 
   @ApiProperty()
   total: number;
